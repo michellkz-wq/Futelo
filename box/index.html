@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparateur Box Internet — Toutes les offres fibre, 4G/5G | Futelo</title>
+<meta name="description" content="Comparez toutes les offres Box Internet en France : fibre optique, box 4G/5G, pas chères, sans engagement. Mis à jour quotidiennement.">
+<link rel="canonical" href="https://futelo.nanocorp.app/box/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://futelo.nanocorp.app/"},{"@type":"ListItem","position":2,"name":"Box Internet","item":"https://futelo.nanocorp.app/box/"}]}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">fute<span>lo</span></a>
+    <div class="nav-links">
+      <a href="/box/" class="active">Box Internet</a>
+      <a href="/mobile/">Mobile</a>
+      <a href="/promos/">Promos</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/eligibilite/" class="nav-cta">Tester mon éligibilité</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span class="hamburger"></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> › <span>Box Internet</span>
+    </nav>
+    <div class="update-badge">✓ Mis à jour le 11 avril 2026</div>
+    <h1>Comparateur Box Internet</h1>
+    <p>Comparez toutes les offres Box Internet du marché français : fibre optique, ADSL, box 4G/5G. Filtrez selon vos besoins et trouvez la meilleure offre.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Sous-catégories -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2.5rem">
+      <a href="/box/fibre/" style="display:flex;align-items:center;gap:12px;padding:1.25rem;background:white;border:1.5px solid var(--blue);border-radius:var(--radius);text-decoration:none;color:var(--text)">
+        <span style="font-size:1.5rem">🚀</span>
+        <div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem">Box Fibre</div>
+          <div style="font-size:0.8rem;color:var(--text-3)">Jusqu'à 8 Gbit/s</div>
+        </div>
+      </a>
+      <a href="/box/4g-5g/" style="display:flex;align-items:center;gap:12px;padding:1.25rem;background:white;border:1.5px solid var(--border);border-radius:var(--radius);text-decoration:none;color:var(--text)">
+        <span style="font-size:1.5rem">📡</span>
+        <div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem">Box 4G/5G</div>
+          <div style="font-size:0.8rem;color:var(--text-3)">Sans raccordement</div>
+        </div>
+      </a>
+      <a href="/box/pas-cher/" style="display:flex;align-items:center;gap:12px;padding:1.25rem;background:white;border:1.5px solid var(--border);border-radius:var(--radius);text-decoration:none;color:var(--text)">
+        <span style="font-size:1.5rem">💰</span>
+        <div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem">Box pas chère</div>
+          <div style="font-size:0.8rem;color:var(--text-3)">Dès 15,99€/mois</div>
+        </div>
+      </a>
+      <a href="/box/sans-engagement/" style="display:flex;align-items:center;gap:12px;padding:1.25rem;background:white;border:1.5px solid var(--border);border-radius:var(--radius);text-decoration:none;color:var(--text)">
+        <span style="font-size:1.5rem">🔓</span>
+        <div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem">Sans engagement</div>
+          <div style="font-size:0.8rem;color:var(--text-3)">Résiliable à tout moment</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="trust-block">
+      <div class="trust-icon">🛡️</div>
+      <div>
+        <h3>Pourquoi nous faire confiance ?</h3>
+        <p>Nos comparatifs sont mis à jour quotidiennement. Notre classement est basé sur le coût total sur 12 mois, les frais, la qualité Wi-Fi et le débit — jamais sur les commissions reçues. <a href="/methodologie/">En savoir plus sur notre méthode →</a></p>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-bar">
+      <span class="filter-label">Filtrer :</span>
+      <button class="filter-btn active" data-filter="all" data-group="type">Toutes les box</button>
+      <button class="filter-btn" data-filter="fibre" data-group="type">Fibre</button>
+      <button class="filter-btn" data-filter="4g-5g" data-group="type">4G/5G</button>
+      <button class="filter-btn" data-filter="sans-engagement" data-group="engagement">Sans engagement</button>
+      <button class="filter-btn" data-filter="tv" data-group="tv">Avec TV</button>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+        <span class="filter-label">Trier :</span>
+        <select class="filter-select" id="sort-select">
+          <option value="prix">Prix mensuel</option>
+          <option value="prix12">Coût total 12 mois</option>
+          <option value="debit">Débit</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="offers-grid">
+
+      <div class="offer-card top-pick" data-tags="fibre sans-engagement tv" data-prix="29.99" data-prix12="406" data-debit="8000">
+        <div class="offer-badge">🏆 Meilleur rapport qualité-prix</div>
+        <div class="offer-header">
+          <div class="operator-logo op-free">FREE</div>
+          <div>
+            <div class="offer-title">Freebox Revolution</div>
+            <div class="offer-sub">Fibre • Sans engagement</div>
+          </div>
+          <div class="rank rank-1" style="margin-left:auto">1</div>
+        </div>
+        <div class="offer-price">
+          <div class="price-main">29,99€<span>/mois</span></div>
+          <div class="price-after">Puis 39,99€/mois | Frais : 49€</div>
+        </div>
+        <ul class="offer-features">
+          <li>Fibre jusqu'à 8 Gbit/s</li>
+          <li>Wi-Fi 7</li>
+          <li>TV incluse</li>
+          <li>Sans engagement</li>
+        </ul>
+        <div style="margin-bottom:1rem">
+          <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-3);margin-bottom:4px"><span>Score</span><span>94/100</span></div>
+          <div class="score-bar"><div class="score-fill" data-width="94%" style="width:0"></div></div>
+        </div>
+        <a href="/offres/free/freebox-revolution/" class="btn btn-primary" style="width:100%;justify-content:center">Voir l'offre →</a>
+      </div>
+
+      <div class="offer-card" data-tags="fibre engagement tv" data-prix="34.99" data-prix12="432" data-debit="2000">
+        <div class="offer-badge green">Premium</div>
+        <div class="offer-header">
+          <div class="operator-logo" style="background:#FFF3E0;color:#FF7900">ORA</div>
+          <div>
+            <div class="offer-title">Orange Livebox Max</div>
+            <div class="offer-sub">Fibre • Engagement 12 mois</div>
+          </div>
+          <div class="rank rank-2" style="margin-left:auto">2</div>
+        </div>
+        <div class="offer-price">
+          <div class="price-main">34,99€<span>/mois</span></div>
+          <div class="price-after">Puis 47,99€/mois | Frais : 49€</div>
+        </div>
+        <ul class="offer-features">
+          <li>Fibre jusqu'à 2 Gbit/s</li>
+          <li>Wi-Fi 6E + répéteur offert</li>
+          <li>100+ chaînes TV</li>
+          <li>Engagement 12 mois</li>
+        </ul>
+        <div style="margin-bottom:1rem">
+          <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-3);margin-bottom:4px"><span>Score</span><span>88/100</span></div>
+          <div class="score-bar"><div class="score-fill" data-width="88%" style="width:0"></div></div>
+        </div>
+        <a href="/offres/orange/livebox-max/" class="btn btn-secondary" style="width:100%;justify-content:center">Voir l'offre</a>
+      </div>
+
+      <div class="offer-card" data-tags="fibre sans-engagement tv" data-prix="26.99" data-prix12="394" data-debit="2000">
+        <div class="offer-header">
+          <div class="operator-logo" style="background:#E8F0F8;color:#005CB9">BYG</div>
+          <div>
+            <div class="offer-title">Bbox Must</div>
+            <div class="offer-sub">Fibre • Sans engagement</div>
+          </div>
+          <div class="rank rank-3" style="margin-left:auto">3</div>
+        </div>
+        <div class="offer-price">
+          <div class="price-main">26,99€<span>/mois</span></div>
+          <div class="price-after">Puis 38,99€/mois | Frais : 49€</div>
+        </div>
+        <ul class="offer-features">
+          <li>Fibre jusqu'à 2 Gbit/s</li>
+          <li>Wi-Fi 6</li>
+          <li>TV incluse</li>
+          <li>Sans engagement</li>
+        </ul>
+        <div style="margin-bottom:1rem">
+          <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-3);margin-bottom:4px"><span>Score</span><span>85/100</span></div>
+          <div class="score-bar"><div class="score-fill" data-width="85%" style="width:0"></div></div>
+        </div>
+        <a href="/offres/bouygues/bbox-must/" class="btn btn-secondary" style="width:100%;justify-content:center">Voir l'offre</a>
+      </div>
+
+      <div class="offer-card" data-tags="fibre sans-engagement" data-prix="24.99" data-prix12="370" data-debit="1000">
+        <div class="offer-header">
+          <div class="operator-logo" style="background:#F5E8E8;color:#DA1B1B">SFR</div>
+          <div>
+            <div class="offer-title">SFR Box Starter Fibre</div>
+            <div class="offer-sub">Fibre • Sans engagement</div>
+          </div>
+        </div>
+        <div class="offer-price">
+          <div class="price-main">24,99€<span>/mois</span></div>
+          <div class="price-after">Puis 35,99€/mois | Frais : 49€</div>
+        </div>
+        <ul class="offer-features">
+          <li>Fibre jusqu'à 1 Gbit/s</li>
+          <li>Wi-Fi 6</li>
+          <li>Sans TV</li>
+          <li>Sans engagement</li>
+        </ul>
+        <div style="margin-bottom:1rem">
+          <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-3);margin-bottom:4px"><span>Score</span><span>79/100</span></div>
+          <div class="score-bar"><div class="score-fill" data-width="79%" style="width:0"></div></div>
+        </div>
+        <a href="/offres/sfr/box-starter-fibre/" class="btn btn-secondary" style="width:100%;justify-content:center">Voir l'offre</a>
+      </div>
+
+      <div class="offer-card" data-tags="4g-5g sans-engagement" data-prix="29.99" data-prix12="360" data-debit="300">
+        <div class="offer-badge orange">📡 Box 4G/5G</div>
+        <div class="offer-header">
+          <div class="operator-logo" style="background:#E8F0F8;color:#005CB9">BYG</div>
+          <div>
+            <div class="offer-title">Bbox 4G+ Power Edition</div>
+            <div class="offer-sub">4G/5G • Sans raccordement</div>
+          </div>
+        </div>
+        <div class="offer-price">
+          <div class="price-main">29,99€<span>/mois</span></div>
+          <div class="price-after">Puis 29,99€/mois | Sans frais d'installation</div>
+        </div>
+        <ul class="offer-features">
+          <li>4G/5G jusqu'à 300 Mbit/s</li>
+          <li>Wi-Fi 6</li>
+          <li>Sans raccordement ni technicien</li>
+          <li>Sans engagement</li>
+        </ul>
+        <a href="/box/4g-5g/" class="btn btn-secondary" style="width:100%;justify-content:center">Voir les box 4G/5G</a>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3rem">
+      <div class="section-header" style="text-align:left"><h2>Tableau comparatif complet</h2></div>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Offre</th>
+              <th>Prix promo</th>
+              <th>Prix normal</th>
+              <th>Coût 12 mois</th>
+              <th>Débit max</th>
+              <th>Wi-Fi</th>
+              <th>Engagement</th>
+              <th>TV</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-tags="fibre sans-engagement tv" data-prix="29.99" data-prix12="406">
+              <td><strong>Freebox Revolution</strong><br><small style="color:var(--text-3)">Free</small></td>
+              <td class="best">29,99€/mois</td>
+              <td>39,99€/mois</td>
+              <td>406€</td>
+              <td>8 Gbit/s</td>
+              <td><span class="badge badge-green">Wi-Fi 7</span></td>
+              <td><span class="badge badge-green">Sans</span></td>
+              <td>✓</td>
+              <td><a href="/offres/free/freebox-revolution/" class="btn btn-primary" style="padding:6px 14px;font-size:0.8rem">Voir →</a></td>
+            </tr>
+            <tr data-tags="fibre engagement tv" data-prix="34.99" data-prix12="432">
+              <td><strong>Orange Livebox Max</strong><br><small style="color:var(--text-3)">Orange</small></td>
+              <td>34,99€/mois</td>
+              <td>47,99€/mois</td>
+              <td>432€</td>
+              <td>2 Gbit/s</td>
+              <td><span class="badge badge-blue">Wi-Fi 6E</span></td>
+              <td><span class="badge badge-orange">12 mois</span></td>
+              <td>✓</td>
+              <td><a href="/offres/orange/livebox-max/" class="btn btn-secondary" style="padding:6px 14px;font-size:0.8rem">Voir</a></td>
+            </tr>
+            <tr data-tags="fibre sans-engagement tv" data-prix="26.99" data-prix12="394">
+              <td><strong>Bbox Must</strong><br><small style="color:var(--text-3)">Bouygues</small></td>
+              <td>26,99€/mois</td>
+              <td>38,99€/mois</td>
+              <td>394€</td>
+              <td>2 Gbit/s</td>
+              <td><span class="badge badge-blue">Wi-Fi 6</span></td>
+              <td><span class="badge badge-green">Sans</span></td>
+              <td>✓</td>
+              <td><a href="/offres/bouygues/bbox-must/" class="btn btn-secondary" style="padding:6px 14px;font-size:0.8rem">Voir</a></td>
+            </tr>
+            <tr data-tags="fibre sans-engagement" data-prix="24.99" data-prix12="370">
+              <td><strong>SFR Box Starter Fibre</strong><br><small style="color:var(--text-3)">SFR</small></td>
+              <td>24,99€/mois</td>
+              <td>35,99€/mois</td>
+              <td>370€</td>
+              <td>1 Gbit/s</td>
+              <td><span class="badge badge-blue">Wi-Fi 6</span></td>
+              <td><span class="badge badge-green">Sans</span></td>
+              <td>—</td>
+              <td><a href="/offres/sfr/box-starter-fibre/" class="btn btn-secondary" style="padding:6px 14px;font-size:0.8rem">Voir</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header"><h2>Questions fréquentes — Box Internet</h2></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Quelle est la meilleure box internet en 2026 ?</button>
+        <div class="faq-a">La meilleure box internet dépend de vos besoins. Pour le meilleur rapport qualité-prix, la Freebox Revolution (Free) est notre recommandation numéro 1 : fibre jusqu'à 8 Gbit/s, Wi-Fi 7, TV incluse, sans engagement à 29,99€/mois. Pour le réseau le plus fiable, Orange Livebox Max est une excellente option avec Wi-Fi 6E et un service client premium.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quelle est la différence entre fibre FTTH et FTTLA ?</button>
+        <div class="faq-a">La fibre FTTH (Fiber To The Home) amène la fibre optique jusqu'à votre logement — c'est la technologie la plus performante, avec des débits jusqu'à 8 Gbit/s. La FTTLA (Fiber To The Last Amplifier) est un réseau câblé hybride coaxial-fibre utilisé par SFR dans certaines zones, offrant des débits jusqu'à 1 Gbit/s. La FTTH est supérieure en termes de débit et de stabilité.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Comment choisir entre une box avec et sans engagement ?</button>
+        <div class="faq-a">Les box sans engagement sont plus chères sur le long terme mais vous permettent de partir à tout moment (déménagement, meilleure offre…). Les box avec engagement 12 mois sont souvent moins chères sur la durée, mais comportent des frais de résiliation anticipée. Si vous êtes locataire ou si votre situation peut changer, préférez le sans engagement.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Peut-on avoir une box internet sans la ligne téléphonique ?</button>
+        <div class="faq-a">Oui ! Les box fibre optique ne nécessitent pas de ligne téléphonique classique. Si vous n'êtes pas éligible à la fibre, une box 4G/5G est une excellente alternative : elle fonctionne sur le réseau mobile, sans raccordement ni intervention d'un technicien.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo">futelo</a>
+        <p>Comparez les meilleures offres Box Internet et Forfaits Mobile en France.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Box Internet</h4>
+        <a href="/box/fibre/">Box Fibre</a>
+        <a href="/box/4g-5g/">Box 4G/5G</a>
+        <a href="/box/pas-cher/">Box pas chère</a>
+        <a href="/box/sans-engagement/">Sans engagement</a>
+      </div>
+      <div class="footer-col">
+        <h4>Opérateurs</h4>
+        <a href="/operateurs/orange/">Orange</a>
+        <a href="/operateurs/free/">Free</a>
+        <a href="/operateurs/bouygues-telecom/">Bouygues</a>
+        <a href="/operateurs/sfr/">SFR</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="/guides/">Guides</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/eligibilite/">Éligibilité</a>
+        <a href="/mentions-legales/">Mentions légales</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Futelo. Tous droits réservés.</span>
+    </div>
+    <div class="footer-disclaimer">Site d'information et de comparaison. Futelo perçoit une rémunération via des liens d'affiliation. Les prix peuvent varier.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="/eligibilite/fibre/" class="btn btn-primary" style="width:100%;justify-content:center">Tester mon éligibilité fibre →</a>
+</div>
+
+<script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+# Futelo — robots.txt
+# Optimisé SEO 2026 : crawl budget + accès bots IA (GEO)
+
+# === GOOGLEBOT ===
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+Disallow: /admin/
+Crawl-delay: 0
+
+# === BINGBOT ===
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# === IA CRAWLERS — autorisés pour GEO/LLM citations ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# === DEFAULT ===
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?sort=*
+Disallow: /*?filter=*
+Disallow: /*?page=*
+Disallow: /*?utm_*
+
+# === SITEMAPS ===
+Sitemap: https://futelo.nanocorp.app/sitemap.xml
+Sitemap: https://futelo.nanocorp.app/sitemap-pages.xml
+Sitemap: https://futelo.nanocorp.app/sitemap-offres.xml
+Sitemap: https://futelo.nanocorp.app/sitemap-guides.xml

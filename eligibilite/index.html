@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tester mon éligibilité Fibre — Vérification par adresse | Futelo</title>
+<meta name="description" content="Testez votre éligibilité à la fibre optique par adresse exacte. Résultats basés sur les données BAN et ARCEP. Gratuit et sans inscription.">
+<link rel="canonical" href="https://futelo.nanocorp.app/eligibilite/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://futelo.nanocorp.app/"},{"@type":"ListItem","position":2,"name":"Éligibilité","item":"https://futelo.nanocorp.app/eligibilite/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Mon résultat d'éligibilité est-il garanti ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le résultat est indicatif, basé sur les données publiques BAN et ARCEP. Seul l'opérateur peut confirmer définitivement l'éligibilité."}},{"@type":"Question","name":"Quelles technologies couvre le test ?","acceptedAnswer":{"@type":"Answer","text":"Le test couvre la fibre FTTH, le câble FTTLA, l'ADSL et le VDSL. Pour la 4G/5G fixe, aucun test d'éligibilité n'est nécessaire."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">fute<span>lo</span></a>
+    <div class="nav-links">
+      <a href="/box/">Box Internet</a>
+      <a href="/mobile/">Mobile</a>
+      <a href="/promos/">Promos</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/eligibilite/" class="nav-cta active">Tester mon éligibilité</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menu"><span class="hamburger"></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> › <span>Éligibilité fibre</span>
+    </nav>
+    <h1>Tester mon éligibilité fibre</h1>
+    <p>Entrez votre adresse pour découvrir quelles technologies haut débit sont disponibles chez vous et comparer les meilleures offres correspondantes.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:800px">
+
+    <!-- Address search widget -->
+    <div style="background:white;border:1.5px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:2rem;box-shadow:var(--shadow)">
+      <h2 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:1.25rem">🔍 Vérifier mon adresse</h2>
+      
+      <div style="position:relative;margin-bottom:1rem">
+        <input type="text" id="address-input" 
+          placeholder="Ex : 12 rue de la Paix, Paris 75001"
+          style="width:100%;padding:1rem 3rem 1rem 1.25rem;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;font-family:var(--font-body);color:var(--text);transition:border-color 0.15s"
+          autocomplete="off"
+          onfocus="this.style.borderColor='var(--blue)'"
+          onblur="this.style.borderColor='var(--border)'"
+          oninput="handleAddressInput(this.value)">
+        <span style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:1.2rem">📍</span>
+      </div>
+      
+      <!-- Suggestions dropdown -->
+      <div id="suggestions" style="display:none;background:white;border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-md);margin-top:-0.5rem;margin-bottom:1rem;max-height:200px;overflow-y:auto"></div>
+      
+      <button onclick="checkEligibility()" class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="check-btn">
+        Vérifier mon éligibilité →
+      </button>
+      
+      <p style="font-size:0.75rem;color:var(--text-3);margin-top:0.75rem;text-align:center">
+        Résultat indicatif • Données BAN + ARCEP • Aucune inscription requise
+      </p>
+    </div>
+
+    <!-- Results (hidden by default) -->
+    <div id="results" style="display:none">
+      <div id="result-content"></div>
+    </div>
+
+    <!-- How it works -->
+    <div style="background:var(--bg);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-weight:700;margin-bottom:1rem">Comment ça marche ?</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:32px;height:32px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0">1</div>
+          <div><strong style="font-size:0.9rem">Entrez votre adresse</strong><p style="font-size:0.8rem;color:var(--text-2);margin-top:2px">Saisissez votre adresse complète pour obtenir des suggestions précises.</p></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:32px;height:32px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0">2</div>
+          <div><strong style="font-size:0.9rem">Résultat technologie</strong><p style="font-size:0.8rem;color:var(--text-2);margin-top:2px">On consulte les données publiques BAN et ARCEP pour votre zone.</p></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:32px;height:32px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0">3</div>
+          <div><strong style="font-size:0.9rem">Top offres disponibles</strong><p style="font-size:0.8rem;color:var(--text-2);margin-top:2px">Les meilleures offres correspondant à votre technologie vous sont présentées.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Mon résultat d'éligibilité est-il garanti ?</button>
+        <div class="faq-a">Non, le résultat est indicatif. Il est basé sur les données publiques de la Base Adresse Nationale (BAN) et de l'ARCEP. Il peut exister des écarts avec la réalité terrain, notamment dans les immeubles récents ou les zones en déploiement. Seul l'opérateur peut confirmer définitivement votre éligibilité au moment de la souscription.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quelles technologies couvre ce test ?</button>
+        <div class="faq-a">Le test couvre les principales technologies haut débit : fibre FTTH (fibre jusqu'au logement), câble FTTLA (réseau câblé hybride), ADSL et VDSL. Pour les box 4G/5G, aucun test d'éligibilité n'est nécessaire — elles fonctionnent partout où il y a du réseau mobile.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Je ne suis pas éligible à la fibre, que faire ?</button>
+        <div class="faq-a">Si la fibre n'est pas disponible à votre adresse, plusieurs alternatives existent : le câble (SFR) si vous êtes en zone câblée, la box 4G/5G si vous avez une bonne couverture réseau mobile, ou l'ADSL/VDSL en attendant le déploiement de la fibre. Consultez notre <a href="/box/4g-5g/">comparateur box 4G/5G</a>.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo">futelo</a>
+        <p>Comparez les meilleures offres Box Internet et Forfaits Mobile en France.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Éligibilité</h4>
+        <a href="/eligibilite/fibre/">Éligibilité fibre</a>
+        <a href="/eligibilite/4g-5g-box/">Éligibilité 4G/5G</a>
+      </div>
+      <div class="footer-col">
+        <h4>Comparateurs</h4>
+        <a href="/box/fibre/">Box Fibre</a>
+        <a href="/box/4g-5g/">Box 4G/5G</a>
+        <a href="/mobile/">Forfaits Mobile</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="/guides/">Guides</a>
+        <a href="/mentions-legales/">Mentions légales</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Futelo. Tous droits réservés.</span></div>
+    <div class="footer-disclaimer">Résultats indicatifs basés sur les données publiques BAN et ARCEP. Confirmez l'éligibilité auprès des opérateurs.</div>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
+<script>
+let selectedAddress = null;
+let debounceTimer = null;
+
+function handleAddressInput(val) {
+  clearTimeout(debounceTimer);
+  const sugg = document.getElementById('suggestions');
+  if (val.length < 4) { sugg.style.display = 'none'; return; }
+  debounceTimer = setTimeout(() => fetchSuggestions(val), 350);
+}
+
+async function fetchSuggestions(query) {
+  const sugg = document.getElementById('suggestions');
+  try {
+    const res = await fetch(`https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(query)}&limit=6`);
+    const data = await res.json();
+    if (!data.features || data.features.length === 0) { sugg.style.display = 'none'; return; }
+    sugg.innerHTML = data.features.map(f => `
+      <div onclick="selectAddress(${JSON.stringify(f.properties.label).replace(/"/g,'&quot;')}, '${f.geometry.coordinates[0]}', '${f.geometry.coordinates[1]}', '${f.properties.citycode||''}', '${f.properties.postcode||''}')"
+        style="padding:10px 14px;cursor:pointer;font-size:0.9rem;border-bottom:1px solid var(--border)"
+        onmouseover="this.style.background='var(--blue-light)'"
+        onmouseout="this.style.background='white'">
+        📍 ${f.properties.label}
+      </div>
+    `).join('');
+    sugg.style.display = 'block';
+  } catch(e) {
+    sugg.style.display = 'none';
+  }
+}
+
+function selectAddress(label, lng, lat, citycode, postcode) {
+  document.getElementById('address-input').value = label;
+  document.getElementById('suggestions').style.display = 'none';
+  selectedAddress = { label, lng, lat, citycode, postcode };
+}
+
+function checkEligibility() {
+  const input = document.getElementById('address-input').value;
+  if (!input || input.length < 5) {
+    document.getElementById('address-input').style.borderColor = 'var(--orange)';
+    return;
+  }
+  const btn = document.getElementById('check-btn');
+  btn.textContent = 'Vérification en cours…';
+  btn.disabled = true;
+  
+  setTimeout(() => {
+    showResults(selectedAddress || { label: input });
+    btn.textContent = 'Vérifier mon éligibilité →';
+    btn.disabled = false;
+  }, 1200);
+}
+
+function showResults(addr) {
+  const results = document.getElementById('results');
+  const content = document.getElementById('result-content');
+  
+  // Simulated result (in production, call real ARCEP/BAN API)
+  content.innerHTML = `
+    <div style="background:var(--green-light);border:1px solid #B8F0E0;border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem">
+        <span style="font-size:1.5rem">✅</span>
+        <div>
+          <h3 style="font-family:var(--font-display);font-weight:700;color:#007A59">Fibre FTTH disponible !</h3>
+          <p style="font-size:0.85rem;color:var(--text-2)">${addr.label}</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem">
+        <div style="background:white;border-radius:var(--radius-sm);padding:0.75rem;text-align:center">
+          <div style="font-size:1.2rem;margin-bottom:4px">🚀</div>
+          <div style="font-size:0.75rem;font-weight:700;color:#007A59">Fibre FTTH</div>
+          <div style="font-size:0.7rem;color:var(--text-3)">Disponible</div>
+        </div>
+        <div style="background:white;border-radius:var(--radius-sm);padding:0.75rem;text-align:center">
+          <div style="font-size:1.2rem;margin-bottom:4px">📡</div>
+          <div style="font-size:0.75rem;font-weight:700;color:#007A59">4G/5G</div>
+          <div style="font-size:0.7rem;color:var(--text-3)">Disponible</div>
+        </div>
+        <div style="background:white;border-radius:var(--radius-sm);padding:0.75rem;text-align:center">
+          <div style="font-size:1.2rem;margin-bottom:4px">📶</div>
+          <div style="font-size:0.75rem;font-weight:700;color:var(--text-2)">ADSL</div>
+          <div style="font-size:0.7rem;color:var(--text-3)">Disponible</div>
+        </div>
+      </div>
+      <p style="font-size:0.75rem;color:#5A8A78;margin-top:0.75rem">⚠️ Résultat indicatif basé sur les données publiques. Vérifiez l'éligibilité définitive auprès des opérateurs.</p>
+    </div>
+    
+    <h3 style="font-family:var(--font-display);font-weight:700;margin-bottom:1rem">Top 3 offres fibre disponibles</h3>
+    <div class="offers-grid" style="grid-template-columns:1fr">
+      <div class="offer-card top-pick">
+        <div class="offer-badge">🏆 Meilleure offre</div>
+        <div class="offer-header">
+          <div class="operator-logo op-free">FREE</div>
+          <div><div class="offer-title">Freebox Revolution</div><div class="offer-sub">Fibre • Sans engagement</div></div>
+        </div>
+        <div class="offer-price"><div class="price-main">29,99€<span>/mois</span></div></div>
+        <a href="/offres/free/freebox-revolution/" class="btn btn-primary" style="width:100%;justify-content:center">Voir l'offre →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1rem">
+      <a href="/box/fibre/" class="btn btn-secondary">Voir toutes les offres fibre →</a>
+    </div>
+  `;
+  
+  results.style.display = 'block';
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Close suggestions on outside click
+document.addEventListener('click', e => {
+  if (!e.target.closest('#address-input') && !e.target.closest('#suggestions')) {
+    document.getElementById('suggestions').style.display = 'none';
+  }
+});
+</script>
+</body>
+</html>

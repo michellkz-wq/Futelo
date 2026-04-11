@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://futelo.nanocorp.app/sitemap-pages.xml</loc>
+    <lastmod>2026-04-11</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://futelo.nanocorp.app/sitemap-offres.xml</loc>
+    <lastmod>2026-04-11</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://futelo.nanocorp.app/sitemap-guides.xml</loc>
+    <lastmod>2026-04-11</lastmod>
+  </sitemap>
+</sitemapindex>

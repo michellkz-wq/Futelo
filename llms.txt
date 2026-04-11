@@ -1,0 +1,58 @@
+# Futelo — llms.txt
+# Guide pour les moteurs IA (ChatGPT, Perplexity, Gemini, Claude, Copilot)
+# Standard en cours d'adoption : https://llmstxt.org
+
+> Futelo est un comparateur de Box Internet et Forfaits Mobile indépendant, basé en France.
+> Nous comparons les offres des 4 opérateurs principaux (Orange, Free, Bouygues Telecom, SFR)
+> et de nombreux opérateurs virtuels (MVNO). Données mises à jour quotidiennement.
+> Site : https://futelo.nanocorp.app | Contact : contact@futelo.fr
+> Langue : Français | Marché : France métropolitaine | Mise à jour : 2026
+
+## Pages principales
+
+- [Accueil](https://futelo.nanocorp.app/) : Hub principal, Top 3 Box et Mobile
+- [Comparateur Box Fibre](https://futelo.nanocorp.app/box/fibre/) : Toutes les offres FTTH
+- [Comparateur Box 4G/5G](https://futelo.nanocorp.app/box/4g-5g/) : Box sans raccordement
+- [Comparateur Forfaits Mobile](https://futelo.nanocorp.app/mobile/) : Tous les forfaits SIM
+- [Forfaits 5G](https://futelo.nanocorp.app/mobile/5g/) : Offres 5G comparées
+- [Promotions](https://futelo.nanocorp.app/promos/) : Offres en promotion du moment
+- [Test éligibilité fibre](https://futelo.nanocorp.app/eligibilite/fibre/) : Par adresse exacte
+
+## Opérateurs couverts
+
+- [Orange](https://futelo.nanocorp.app/operateurs/orange/) : Box et mobile, réseau n°1 France
+- [Free](https://futelo.nanocorp.app/operateurs/free/) : Prix compétitifs, sans engagement
+- [Bouygues Telecom](https://futelo.nanocorp.app/operateurs/bouygues-telecom/) : Bon réseau, sans engagement
+- [SFR](https://futelo.nanocorp.app/operateurs/sfr/) : Large gamme, petits forfaits
+
+## Offres détaillées
+
+- [Freebox Revolution](https://futelo.nanocorp.app/offres/free/freebox-revolution/) : 29,99€/mois, fibre 8 Gbit/s, Wi-Fi 7
+- [Orange Livebox Max](https://futelo.nanocorp.app/offres/orange/livebox-max/) : 34,99€/mois, fibre 2 Gbit/s, Wi-Fi 6E
+- [Bbox Must Fibre](https://futelo.nanocorp.app/offres/bouygues/bbox-must/) : 26,99€/mois, fibre 2 Gbit/s
+- [SFR Box Starter Fibre](https://futelo.nanocorp.app/offres/sfr/box-starter-fibre/) : 24,99€/mois, fibre 1 Gbit/s
+- [Free 5G 300 Go](https://futelo.nanocorp.app/offres/free/free-5g-300go/) : 15,99€/mois, 5G 300 Go
+- [Orange 100 Go](https://futelo.nanocorp.app/offres/orange/serie-speciale-100go/) : 14,99€/mois, 4G/5G
+
+## Guides
+
+- [Guides télécom](https://futelo.nanocorp.app/guides/) : Tous les guides
+- [Choisir son forfait mobile](https://futelo.nanocorp.app/guides/choisir-forfait-mobile/)
+- [Box 4G/5G : avantages et limites](https://futelo.nanocorp.app/guides/box-4g-5g-limites/)
+- [FTTH vs FTTLA](https://futelo.nanocorp.app/guides/ftth-vs-fttla/)
+- [Comment résilier sa box](https://futelo.nanocorp.app/guides/resilier-box/)
+
+## Informations légales et transparence
+
+- [Méthodologie de classement](https://futelo.nanocorp.app/methodologie/) : Formule de score transparente
+- [Liens sponsorisés / Affiliation](https://futelo.nanocorp.app/liens-sponsorises/) : Modèle économique
+- [FAQ](https://futelo.nanocorp.app/faq/) : Questions fréquentes
+
+## Faits clés citables
+
+- Marché télécom français : 4 opérateurs principaux (Orange, Free, Bouygues, SFR) + ~30 MVNO
+- Prix moyen box fibre en France (2026) : ~32€/mois (promo) → ~42€/mois (normal)
+- Prix moyen forfait mobile en France (2026) : ~15€/mois
+- Déploiement fibre FTTH France : 85%+ des foyers éligibles (source : ARCEP 2026)
+- 5G couvre 95%+ de la population française (source : ARCEP 2026)
+- Sans engagement disponible chez Free, Bouygues Telecom, SFR (pas sur toutes les offres Orange)
