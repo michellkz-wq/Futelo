@@ -1,0 +1,51 @@
+# ============================================================
+# FUTELO - Fichier de redirections Netlify
+# ============================================================
+# Ce fichier gère toutes les redirections vers les opérateurs.
+# Quand vous aurez vos liens Awin/Kwanko, remplacez simplement
+# l'URL de destination (la 2e colonne) par votre lien tracké.
+#
+# Format : /chemin-source  https://destination  code
+# Code 302 = redirection temporaire (pour affiliation = correct)
+# ============================================================
+
+
+# === BOX INTERNET ============================================
+
+/go/free-freebox-revolution    https://www.free.fr/freebox/freebox-revolution-light    302
+/go/free-freebox-pop           https://www.free.fr/freebox/freebox-pop                 302
+/go/free-freebox-pop-s         https://www.free.fr/freebox/freebox-pop-s               302
+/go/free-freebox-ultra         https://www.free.fr/freebox/freebox-ultra               302
+/go/free-freebox-ultra-essentiel  https://www.free.fr/freebox/freebox-ultra-essentiel  302
+
+/go/orange-livebox-max         https://boutique.orange.fr/internet/livebox-max         302
+/go/orange-livebox             https://boutique.orange.fr/internet/                    302
+
+/go/bouygues-bbox-must         https://www.bouyguestelecom.fr/offres-internet/bbox-must  302
+/go/bouygues-bbox-fit          https://www.bouyguestelecom.fr/offres-internet/         302
+/go/bouygues-bbox-ultym        https://www.bouyguestelecom.fr/offres-internet/         302
+
+/go/sfr-box-fibre              https://www.sfr.fr/offre-internet/                      302
+/go/sfr-box-power              https://www.sfr.fr/offre-internet/                      302
+
+
+# === FORFAITS MOBILE =========================================
+
+/go/free-mobile-5g             https://mobile.free.fr/                                 302
+/go/free-mobile-2euros         https://mobile.free.fr/                                 302
+
+/go/orange-serie-speciale      https://boutique.orange.fr/mobile/                      302
+/go/orange-mobile              https://boutique.orange.fr/mobile/                      302
+
+/go/bouygues-sensation         https://www.bouyguestelecom.fr/forfaits-mobiles/        302
+/go/bouygues-b-and-you         https://www.bouyguestelecom.fr/forfaits-mobiles/b-and-you  302
+
+/go/sfr-forfait-mobile         https://www.sfr.fr/offre-mobile/                        302
+/go/red-by-sfr                 https://www.red-by-sfr.fr/forfaits-mobile/              302
+
+
+# === BOX 4G/5G ===============================================
+
+/go/bouygues-4g-box            https://www.bouyguestelecom.fr/offres-internet/4g-box   302
+/go/free-box-5g                https://www.free.fr/freebox/box-5g                      302
+/go/orange-box-4g-home         https://boutique.orange.fr/internet/                    302
